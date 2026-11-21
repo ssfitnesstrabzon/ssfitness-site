@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- Önizleme: alan adı bağlanıp Samet Şen onaylayınca "noindex" kaldırılır (README: yayın listesi). -->
+  <!-- Önizleme: alan adı bağlanıp Samet Şen onaylayınca "noindex" kaldırılır (README: açılış listesi). -->
   <meta name="robots" content="noindex, nofollow">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>SSFitness · Trabzon Ortahisar spor salonu · QR'la giriş</title>
-  <meta name="description" content="SSFitness, Trabzon Ortahisar Fatih Mahallesi'nde spor salonu. Aylık 2.000 TL'den başlayan üyelik, telefonla QR'lı turnike girişi. Bilgi ve kayıt: 0507 687 48 90 (WhatsApp).">
+  <title>SSFitness · Trabzon Ortahisar spor salonu</title>
+  <meta name="description" content="SSFitness, Trabzon Ortahisar Fatih Mahallesi'nde spor salonu. Açık 09:00–22:00. Aylık 2.000 TL'den başlayan üyelik, kişiye özel beslenme programı. Bilgi: 0507 687 48 90 (WhatsApp).">
   <meta name="theme-color" content="#111316">
   <link rel="canonical" href="https://ssfitnesstrabzon.github.io/ssfitness-site/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="SSFitness · Trabzon Ortahisar spor salonu">
-  <meta property="og:description" content="Gel, okut, çalış. Aylık 2.000 TL'den başlayan üyelik, telefonla QR'lı giriş.">
+  <meta property="og:description" content="Fatih Mahallesi'nde spor salonu. 09:00–22:00 açık, aylık 2.000 TL'den başlayan üyelik.">
   <meta property="og:image" content="https://ssfitnesstrabzon.github.io/ssfitness-site/marka/ssfitness-logo-1024.png">
   <link rel="icon" href="marka/logo-daire.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="marka/ssfitness-logo-1024.png">
@@ -57,53 +57,68 @@
       <span>SSFITNESS</span>
     </a>
     <nav class="menu" aria-label="Sayfa bölümleri">
+      <a href="#salon">Salon</a>
       <a href="#uyelik">Üyelik</a>
-      <a href="#giris">Giriş</a>
       <a href="#konum">Konum</a>
     </nav>
     <a class="btn btn-ana btn-kucuk" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%20%C3%BCyeli%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">WhatsApp</a>
   </header>
 
   <main id="icerik">
-    <section class="giris-ekran" aria-labelledby="baslik">
-      <div class="giris-metin">
-        <p class="ust-etiket"><span class="nokta" aria-hidden="true"></span>Trabzon · Ortahisar · Fatih Mah.</p>
+    <!-- İlk ekran: salonun kendisi. Fotoğraf gelince .foto-yer yerine <img class="kapak-foto"> konur. -->
+    <section class="kapak" aria-labelledby="baslik">
+      <div class="kapak-metin">
+        <p class="ust-etiket"><span class="nokta" aria-hidden="true"></span>SSFitness · Trabzon Ortahisar</p>
         <h1 id="baslik" class="dev">
-          <span class="satir"><span>Gel,</span></span>
-          <span class="satir"><span class="turuncu">okut,</span></span>
-          <span class="satir"><span>çalış.</span></span>
+          <span class="satir"><span>Fatih'te</span></span>
+          <span class="satir"><span class="turuncu">spor</span></span>
+          <span class="satir"><span>salonu.</span></span>
         </h1>
-        <p class="giris-alt">SSFitness'ta üyelik kartın telefonunda: turnikede QR'ını gösterirsin, kalan gününü her an görürsün. Aylık <b>2.000 TL</b>'den başlayan üyelik.</p>
+        <ul class="kapak-bilgi" role="list">
+          <li><b>09:00–22:00</b> açık</li>
+          <li>Aylık <b>2.000 TL</b>'den</li>
+          <li>Google'da <b>4,5 ★</b></li>
+        </ul>
         <div class="dugmeler">
-          <a class="btn btn-ana" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%27e%20%C3%BCye%20olmak%20istiyorum." rel="noopener">WhatsApp'tan üye ol</a>
-          <a class="btn btn-cizgi" href="#uyelik">Fiyatlara bak</a>
+          <a class="btn btn-ana" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">WhatsApp'tan bilgi al</a>
+          <a class="btn btn-cizgi" href="#uyelik">Fiyatlar</a>
         </div>
       </div>
-
-      <figure class="telefon" aria-label="Üye kartı örneği">
-        <div class="telefon-govde">
-          <div class="kart-ust"><img src="marka/logo-daire.svg" alt="" width="28" height="28"><span>SSFITNESS</span></div>
-          <p class="kart-ad">Örnek Üye</p>
-          <p class="kart-durum"><span class="cip">Aktif</span> 28 gün kaldı</p>
-          <img class="kart-qr" src="qr-whatsapp.svg" alt="QR kodu: okutunca SSFitness WhatsApp hattı açılır" width="220" height="220">
-          <div class="geri-sayim" aria-hidden="true"><span></span></div>
-          <p class="kart-not">30 sn'de bir yeni kod</p>
-        </div>
-        <figcaption>
-          <span class="masaustu">Telefonunun kamerasıyla bu QR'ı okut, WhatsApp'tan bize yaz.</span>
-          <span class="mobil">Üye olunca kartın telefonunda böyle görünür.</span>
-        </figcaption>
-      </figure>
+      <div class="foto-yer foto-kapak" role="img" aria-label="Salon fotoğrafı (yakında)"><span>Salon fotoğrafı</span></div>
     </section>
 
     <div class="serit" aria-hidden="true">
       <div class="serit-yazi">
-        <span>QR'la giriş</span><span>Fatih Mah. Ocak Sok.</span><span>Ortahisar · Trabzon</span><span>09:00 – 22:00</span>
-        <span>QR'la giriş</span><span>Fatih Mah. Ocak Sok.</span><span>Ortahisar · Trabzon</span><span>09:00 – 22:00</span>
+        <span>Kardiyo</span><span>Ağırlık</span><span>Kişiye özel program</span><span>Beslenme</span>
+        <span>Kardiyo</span><span>Ağırlık</span><span>Kişiye özel program</span><span>Beslenme</span>
       </div>
     </div>
 
-    <section id="uyelik" class="bolum" aria-labelledby="uyelik-baslik">
+    <section id="salon" class="bolum" aria-labelledby="salon-baslik">
+      <header class="bolum-ust">
+        <p class="ust-etiket">Salonda</p>
+        <h2 id="salon-baslik">Antrenmanın için gereken her şey.</h2>
+      </header>
+      <ul class="olanaklar" role="list">
+        <li class="olanak olanak-buyuk">
+          <span class="olanak-no">01</span>
+          <h3>Kişiye özel program</h3>
+          <p>Hedefine göre beslenme programı hazırlanır. Programın WhatsApp'tan gelir, telefonunda hep yanında.</p>
+        </li>
+        <li class="olanak"><span class="olanak-no">02</span><h3>Kardiyo</h3><p>Koşu bandı ve bisikletlerle ısınma, kondisyon, yağ yakımı.</p></li>
+        <li class="olanak"><span class="olanak-no">03</span><h3>Ağırlık alanı</h3><p>Serbest ağırlık ve makinelerle kuvvet antrenmanı.</p></li>
+        <li class="olanak"><span class="olanak-no">04</span><h3>Kartsız giriş</h3><p>Üye kartın telefonunda: turnikede QR'ını gösterip geçersin, kalan gününü görürsün.</p></li>
+      </ul>
+      <div class="galeri" aria-label="Salondan fotoğraflar (yakında)">
+        <div class="foto-yer" role="img" aria-label="Alet alanı fotoğrafı (yakında)"><span>Alet alanı</span></div>
+        <div class="foto-yer" role="img" aria-label="Kardiyo alanı fotoğrafı (yakında)"><span>Kardiyo</span></div>
+        <div class="foto-yer" role="img" aria-label="Ağırlık alanı fotoğrafı (yakında)"><span>Ağırlıklar</span></div>
+        <div class="foto-yer" role="img" aria-label="Giriş fotoğrafı (yakında)"><span>Giriş</span></div>
+        <div class="foto-yer" role="img" aria-label="Soyunma odası fotoğrafı (yakında)"><span>Soyunma odası</span></div>
+      </div>
+    </section>
+
+    <section id="uyelik" class="bolum bolum-acik" aria-labelledby="uyelik-baslik">
       <header class="bolum-ust">
         <p class="ust-etiket">Üyelik</p>
         <h2 id="uyelik-baslik">Ne kadar uzun, o kadar kârlı.</h2>
@@ -111,20 +126,20 @@
       <ol class="tabela" role="list">
         <li class="paket">
           <p class="paket-sure"><span class="sayi">1</span> ay</p>
-          <p class="paket-fiyat"><span class="sayi">2.000</span> TL</p>
-          <p class="paket-not">Denemek için.</p>
+          <p class="paket-fiyat"><span class="sayi">2.000</span> <span class="tl">TL</span></p>
+          <p class="paket-not">Başlamak için.</p>
           <a class="paket-link" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%201%20ayl%C4%B1k%20%C3%BCyelik%20(2.000%20TL)%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">Bu paketi sor →</a>
         </li>
         <li class="paket">
           <p class="paket-sure"><span class="sayi">3</span> ay</p>
-          <p class="paket-fiyat"><span class="sayi">5.500</span> TL</p>
+          <p class="paket-fiyat"><span class="sayi">5.500</span> <span class="tl">TL</span></p>
           <p class="paket-not">Ayda ~1.833 TL · <b class="kazanc">500 TL kârlı</b></p>
           <a class="paket-link" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%203%20ayl%C4%B1k%20%C3%BCyelik%20(5.500%20TL)%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">Bu paketi sor →</a>
         </li>
         <li class="paket paket-one">
           <p class="paket-rozet">En avantajlı</p>
           <p class="paket-sure"><span class="sayi">6</span> ay</p>
-          <p class="paket-fiyat"><span class="sayi">10.000</span> TL</p>
+          <p class="paket-fiyat"><span class="sayi">10.000</span> <span class="tl">TL</span></p>
           <p class="paket-not">Ayda ~1.667 TL · <b class="kazanc">2.000 TL kârlı</b></p>
           <a class="paket-link" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%206%20ayl%C4%B1k%20%C3%BCyelik%20(10.000%20TL)%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">Bu paketi sor →</a>
         </li>
@@ -132,17 +147,16 @@
       <p class="kucuk">Kasım 2026 fiyatları. Kâr, 1 aylık ücretle (2.000 TL) karşılaştırmadır.</p>
     </section>
 
-    <section id="giris" class="bolum bolum-acik" aria-labelledby="giris-baslik">
-      <header class="bolum-ust">
-        <p class="ust-etiket">Giriş</p>
-        <h2 id="giris-baslik">Kart yok, uygulama marketi yok, şifre yok.</h2>
-      </header>
-      <ol class="adimlar" role="list">
-        <li><span class="adim-no">01</span><h3>Kaydol</h3><p>Resepsiyonda üye ol. Kartının linki WhatsApp'tan gelir.</p></li>
-        <li><span class="adim-no">02</span><h3>Ana ekrana ekle</h3><p>Link telefonunda uygulama gibi açılır. İndirme yok, hesap yok.</p></li>
-        <li><span class="adim-no">03</span><h3>Okut, geç</h3><p>Turnikedeki okuyucuya QR'ını göster. Kalan günün kartında yazar.</p></li>
-      </ol>
-      <p class="guven">QR her 30 saniyede bir değişir: ekran görüntüsüyle giriş olmaz, kartın sana özel kalır. Bilgilerin yalnız salonun bilgisayarında durur. <a href="https://ssfitnesstrabzon.github.io/aydinlatma.html">KVKK aydınlatma metni</a></p>
+    <section class="bolum yorum" aria-labelledby="yorum-baslik">
+      <div class="yorum-puan">
+        <p class="yorum-sayi sayi">4,5</p>
+        <p class="yildiz" aria-hidden="true">★★★★★</p>
+      </div>
+      <div class="yorum-metin">
+        <h2 id="yorum-baslik">Salonu bir de gelenlerden dinleyin.</h2>
+        <p class="yorum-alt">Google Haritalar puanı · Ss Fitness Salonu</p>
+        <a class="btn btn-cizgi" href="https://www.google.com/maps/search/?api=1&amp;query=Ss%20Fitness%20Salonu%2C%20Ocak%20Sk.%2C%20Fatih%2C%20Trabzon" rel="noopener">Yorumları Google'da oku</a>
+      </div>
     </section>
 
     <section id="konum" class="bolum" aria-labelledby="konum-baslik">
@@ -155,12 +169,15 @@
           <p class="adres-buyuk">Fatih Mah., Ocak Sok. No: 1A</p>
           <p>Ortahisar / Trabzon</p>
           <p class="saat"><span class="nokta" aria-hidden="true"></span>Çalışma saatleri <b>09:00 – 22:00</b></p>
+          <div class="konum-dugmeler">
+            <a class="btn btn-ana" href="https://www.google.com/maps/search/?api=1&amp;query=Ss%20Fitness%20Salonu%2C%20Ocak%20Sk.%2C%20Fatih%2C%20Trabzon" rel="noopener">Yol tarifi al</a>
+            <a class="btn btn-cizgi" href="tel:+905076874890">Ara · 0507 687 48 90</a>
+          </div>
         </address>
-        <div class="konum-dugmeler">
-          <a class="btn btn-ana" href="https://www.google.com/maps/search/?api=1&amp;query=Ss%20Fitness%20Salonu%2C%20Ocak%20Sk.%2C%20Fatih%2C%20Trabzon" rel="noopener">Yol tarifi al</a>
-          <a class="btn btn-cizgi" href="tel:+905076874890">Ara · 0507 687 48 90</a>
-          <a class="btn btn-cizgi" href="https://wa.me/905076874890?text=Merhaba%2C%20SSFitness%20%C3%BCyeli%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." rel="noopener">WhatsApp'tan yaz</a>
-        </div>
+        <figure class="wp-kutu">
+          <img src="qr-whatsapp.svg" alt="QR kodu: okutunca SSFitness WhatsApp hattı açılır" width="180" height="180">
+          <figcaption>Telefonunla okut, WhatsApp'tan yaz.</figcaption>
+        </figure>
       </div>
     </section>
   </main>
