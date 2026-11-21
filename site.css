@@ -87,21 +87,18 @@ b { font-weight: 600; }
 .kapak-bilgi b { color: var(--ink); }
 .kapak-bilgi li + li::before { content: "·"; margin-right: 22px; color: var(--brand); }
 
-/* Fotoğraf yeri: Samet'in fotoğrafları gelince <img> ile değişir. Boşken de tasarımın parçası gibi durur. */
-.foto-yer {
-  position: relative; border-radius: var(--r); overflow: hidden; min-width: 0; aspect-ratio: 4 / 3;
-  background: linear-gradient(160deg, #1d2127, #121418);
-  border: 1px solid var(--line); display: grid; place-items: end start; padding: 16px;
+/* Fotoğraflar: kapak hafif eğik, turuncu ışıklı gölge; galeride alt yazı koyu degrade üstünde. */
+.foto-kapak {
+  width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r);
+  transform: rotate(1.5deg); box-shadow: 0 40px 80px -36px rgb(249 115 22 / 0.5), 0 0 0 1px var(--line);
 }
-.foto-yer::before {
-  content: ""; position: absolute; inset: 0; opacity: 0.08;
-  background: repeating-linear-gradient(-45deg, var(--brand) 0 2px, transparent 2px 22px);
+.foto { position: relative; margin: 0; min-width: 0; border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); }
+.foto img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform 600ms var(--ease); }
+.foto:hover img { transform: scale(1.04); }
+.foto figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 28px 14px 12px; background: linear-gradient(transparent, rgb(10 11 13 / 0.85));
+  font: 700 1rem/1 var(--font-display); letter-spacing: 0.1em; text-transform: uppercase;
 }
-.foto-yer span {
-  position: relative; font: 600 0.8rem/1 var(--font-body); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
-  border: 1px dashed #3a414b; padding: 8px 10px; border-radius: 8px;
-}
-.foto-kapak { aspect-ratio: 4 / 5; transform: rotate(1.5deg); box-shadow: 0 40px 80px -36px rgb(249 115 22 / 0.5); }
 .dev {
   font: 700 clamp(4.2rem, 2rem + 11vw, 10.5rem)/0.84 var(--font-display); text-transform: uppercase; letter-spacing: -0.01em;
 }
@@ -173,7 +170,7 @@ b { font-weight: 600; }
 .olanak-buyuk .olanak-no, .olanak-buyuk p { color: var(--on-brand); }
 .olanak-buyuk h3 { font-size: clamp(2.2rem, 1.6rem + 2vw, 3.2rem); }
 .galeri { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.galeri .foto-yer:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.galeri .foto:first-child, .galeri .foto:last-child { grid-column: 1 / -1; }
 
 /* Google puanı */
 .yorum { grid-template-columns: auto 1fr; align-items: center; gap: 24px 40px; }
@@ -215,15 +212,19 @@ b { font-weight: 600; }
   .menu { display: flex; }
   .tabela { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: end; }
   .paket-one { padding-block: 40px 30px; }
-  .olanaklar { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .olanaklar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .olanak-buyuk { grid-column: 1 / -1; grid-template-columns: auto 1fr; column-gap: 28px; align-items: end; }
   .olanak-buyuk .olanak-no { grid-row: span 2; font-size: 3rem; }
-  .galeri { grid-template-columns: 1.3fr 1fr 1fr; grid-template-rows: auto auto; }
-  .galeri .foto-yer:first-child { grid-column: auto; grid-row: span 2; aspect-ratio: auto; }
+  .galeri { grid-template-columns: 1.6fr 1fr 1fr; grid-template-rows: auto auto; }
+  .galeri .foto:first-child { grid-column: auto; grid-row: span 2; }
+  .galeri .foto:first-child img { aspect-ratio: auto; }
+  .galeri .foto:last-child { grid-column: span 2; }
+  .galeri .foto:last-child img { aspect-ratio: 32 / 9; }
   .konum-dugmeler { grid-template-columns: repeat(2, auto); justify-content: start; }
 }
 @media (min-width: 980px) {
   .kapak { grid-template-columns: 1.15fr 0.85fr; align-items: center; min-height: calc(100svh - 72px); }
+  .olanaklar { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .konum-izgara { grid-template-columns: 1fr auto; }
   .wp-kutu { display: grid; }
 }
